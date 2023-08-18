@@ -1,0 +1,56 @@
+{
+    "extends": "expo/tsconfig.base",
+    "compilerOptions": {
+        "downlevelIteration": true,
+        "lib": [
+            "dom",
+            "dom.iterable",
+            "esnext"
+        ],
+        "allowJs": true,
+        "skipLibCheck": true,
+        "alwaysStrict": true,
+        "forceConsistentCasingInFileNames": true,
+        "allowSyntheticDefaultImports": true,
+        "noEmit": true,
+        "esModuleInterop": true,
+        "module": "esnext",
+        "noFallthroughCasesInSwitch": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "moduleResolution": "node",
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "strictNullChecks": false,
+        "baseUrl": "./",
+        "paths": {
+            "styled-components": ["./node_modules/styled-components"],
+            "i18next": ["./node_modules/i18next"],
+            "components/*": ["./App/components/*"],
+            "images/*": ["./App/assets/images/*"],
+            "dimensions": ["./App/dimensions"],
+            "locales/*": ["./App/locales/*"],
+            "locales": ["./App/locales"],
+            "store/*": ["./App/store/*"],
+            "store": ["./App/store"],
+            "themes": ["./App/themes"]
+        },
+        "target": "es6",
+        "strict": true,
+        "jsx": "preserve",
+        "incremental": false
+    },
+    "exclude": [
+        "node_modules",
+        "**/*.test.jsx",
+        "**/*.test.js",
+        "**/*.test.ts",
+        "**/*.test.tsx",
+        "__mocks__"
+    ],
+    "include": [
+        "**/*.ts",
+        "**/*.tsx",
+        "**/*.js"
+    ]
+}
