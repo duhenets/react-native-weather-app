@@ -13,6 +13,8 @@ i18n
         compatibilityJSON: 'v3',
         react: { useSuspense: true },
         interpolation: { escapeValue: false },
+        defaultNS: 'translation',
+        ns: ['translation'],
     });
 
 export const t = i18n.t.bind(i18n);

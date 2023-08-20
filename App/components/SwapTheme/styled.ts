@@ -30,7 +30,7 @@ export const StSwapThemeImage = styled.View`
 type TActive = { $active: boolean };
 
 const imageColorStyle = css<TActive>`
-    color: ${({ theme, $active }) => ($active ? theme.THEME_ACTIVE_COLOR : theme.THEME_INACTIVE_COLOR)};
+    color: ${({ theme, $active }) => ($active ? theme.PRIMARY_COLOR : theme.SECONDARY_COLOR)};
 `;
 
 export const StMoonIcon = styled(MoonIcon)<TActive>`

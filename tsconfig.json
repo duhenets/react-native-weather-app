@@ -33,7 +33,9 @@
             "locales": ["./App/locales"],
             "store/*": ["./App/store/*"],
             "store": ["./App/store"],
-            "themes": ["./App/themes"]
+            "themes": ["./App/themes"],
+            "api/*": ["./App/api/*"],
+            "api": ["./App/api"]
         },
         "target": "es6",
         "strict": true,

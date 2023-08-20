@@ -171,6 +171,8 @@
         "jest/valid-expect": "error",
         "react/jsx-sort-props": "error",
         "@typescript-eslint/no-var-requires": "error",
+        "@typescript-eslint/no-throw-literal": "off",
+        "@typescript-eslint/no-shadow": "off",
         "@typescript-eslint/object-curly-spacing": ["error", "always"],
         "@typescript-eslint/indent": ["error", 4],
         "@typescript-eslint/naming-convention": [

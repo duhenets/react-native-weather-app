@@ -4,7 +4,7 @@ export const hp = (percent: number) => Math.round(heightPercentageToDP(percent))
 
 export const wp = (percent: number) => Math.round(widthPercentageToDP(percent));
 
-export const fontSize = hp(4);
+export const fontSize = hp(2);
 
 export const smallFontSize = hp(2);
 

@@ -6,7 +6,7 @@ declare module 'styled-components' {
         FONT_COLOR: string;
         SECTION_COLOR: string;
         BACKGROUND_COLOR: string;
-        THEME_ACTIVE_COLOR: string;
-        THEME_INACTIVE_COLOR: string;
+        PRIMARY_COLOR: string;
+        SECONDARY_COLOR: string;
     }
 }

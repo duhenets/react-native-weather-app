@@ -1,8 +1,9 @@
 import React from 'react';
 import store from 'store';
 import locales from 'locales';
+import { Provider } from 'react-redux';
 import { I18nextProvider } from 'react-i18next';
-import { Provider, useSelector } from 'react-redux';
+import { useApplicationSelector } from 'store/hooks';
 import { getThemeValue } from 'store/themes/selectors';
 import { ThemeProvider } from 'styled-components/native';
 import { Edge, SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
@@ -11,7 +12,7 @@ import MainLayout from './components/MainLayout';
 const EDGES: Array<Edge> = ['left', 'right', 'bottom'];
 
 const App: React.FC = () => {
-    const theme = useSelector(getThemeValue);
+    const theme = useApplicationSelector(getThemeValue);
 
     return (
         <SafeAreaProvider>

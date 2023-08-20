@@ -1,13 +1,13 @@
 import React from 'react';
-import { swapTheme } from 'store/themes/reducer';
+import { swapTheme } from 'store/themes/slice';
 import { getIsDarkTheme } from 'store/themes/selectors';
-import { useDispatch, useSelector } from 'react-redux';
 import { TouchableWithoutFeedback, Vibration } from 'react-native';
+import { useApplicationDispatch, useApplicationSelector } from 'store/hooks';
 import { StMoonIcon, StSunIcon, StSwapThemeArea, StSwapThemeImage, StSwapThemeView } from './styled';
 
 const SwapTheme: React.FC = () => {
-    const dispatch = useDispatch();
-    const isDarkTheme = useSelector(getIsDarkTheme);
+    const dispatch = useApplicationDispatch();
+    const isDarkTheme = useApplicationSelector(getIsDarkTheme);
 
     const handleSwapTheme = () => {
         Vibration.vibrate(50);

@@ -3,7 +3,7 @@ import { TApplicationState } from 'store';
 import { DefaultTheme } from 'styled-components';
 import * as Types from './types';
 
-export const getThemesState = (state: TApplicationState) => state.themes;
+export const getThemesState = (state: TApplicationState): Types.TThemesState => state.themes;
 
 export const getThemeState = createSelector(
     getThemesState,
