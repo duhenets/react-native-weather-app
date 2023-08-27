@@ -8,5 +8,6 @@ declare module 'styled-components' {
         BACKGROUND_COLOR: string;
         PRIMARY_COLOR: string;
         SECONDARY_COLOR: string;
+        WHITE_COLOR: string;
     }
 }

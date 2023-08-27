@@ -8,17 +8,19 @@ export type TButtonProps = {
     title: TTranslationKeys;
     onPress: () => void;
     disabled?: boolean;
+    margin?: string;
 };
 
 const Button: React.FC<TButtonProps> = ({
     disabled,
     onPress,
+    margin,
     title,
 }) => {
     const { t } = useTranslation();
 
     return (
-        <StTouchableHighlight disabled={disabled} onPress={onPress}>
+        <StTouchableHighlight $margin={margin} disabled={disabled} onPress={onPress}>
             <StButton>
                 <Text $uppercase>{t(`translation:${title}`)}</Text>
             </StButton>

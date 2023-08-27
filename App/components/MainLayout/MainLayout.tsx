@@ -1,10 +1,9 @@
 import React from 'react';
-import Search from 'components/Search';
-import Results from 'components/Results';
+import { Outlet } from 'react-router';
 import { StatusBar } from 'expo-status-bar';
 import SwapTheme from 'components/SwapTheme';
-import { StMainLayout } from 'components/MainLayout/styled';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { StMainLayout, StPageLayout } from 'components/MainLayout/styled';
 
 const MainLayout: React.FC = () => {
     const insets = useSafeAreaInsets();
@@ -13,8 +12,9 @@ const MainLayout: React.FC = () => {
         <StMainLayout insets={insets}>
             <StatusBar animated/>
             <SwapTheme/>
-            <Results/>
-            <Search/>
+            <StPageLayout>
+                <Outlet/>
+            </StPageLayout>
         </StMainLayout>
     );
 };

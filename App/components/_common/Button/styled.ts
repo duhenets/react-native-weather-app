@@ -1,11 +1,16 @@
 import { hp } from 'dimensions';
 import styled from 'styled-components/native';
 
-export const StTouchableHighlight = styled.TouchableHighlight`
+type TStTouchableHighlight = {
+    $margin: string;
+};
+
+export const StTouchableHighlight = styled.TouchableHighlight<TStTouchableHighlight>`
     width: 100%;
     height: ${hp(5)}px;
     border-radius: ${hp(1)}px;
     overflow: hidden;
+    ${({ $margin }) => $margin && `margin: ${$margin};`};
 `;
 
 export const StButton = styled.View`

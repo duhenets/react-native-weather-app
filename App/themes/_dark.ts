@@ -6,6 +6,7 @@ const dark: DefaultTheme = {
     BACKGROUND_COLOR: '#22252D',
     PRIMARY_COLOR: '#26A08D',
     SECONDARY_COLOR: '#686A70',
+    WHITE_COLOR: '#FFFFFF',
 };
 
 export default dark;

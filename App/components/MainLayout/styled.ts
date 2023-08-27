@@ -10,3 +10,8 @@ export const StMainLayout = styled.View<TStMainLayoutProps>`
     background-color: ${({ theme }) => theme.BACKGROUND_COLOR};
     ${({ insets }) => css`padding: ${insets.top}px ${indent}px ${indent}px ${indent}px;`};
 `;
+
+export const StPageLayout = styled.View`
+    flex: 1;
+    width: 100%;
+`;

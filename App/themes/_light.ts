@@ -6,6 +6,7 @@ const light: DefaultTheme = {
     BACKGROUND_COLOR: '#FFFFFF',
     PRIMARY_COLOR: '#26A08D',
     SECONDARY_COLOR: '#E2E2E2',
+    WHITE_COLOR: '#FFFFFF',
 };
 
 export default light;

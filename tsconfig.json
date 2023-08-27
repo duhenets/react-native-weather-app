@@ -30,11 +30,15 @@
             "images/*": ["./App/assets/images/*"],
             "dimensions": ["./App/dimensions"],
             "locales/*": ["./App/locales/*"],
+            "router/*": ["./App/router/*"],
             "locales": ["./App/locales"],
             "store/*": ["./App/store/*"],
-            "store": ["./App/store"],
+            "pages/*": ["./App/pages/*"],
             "themes": ["./App/themes"],
+            "router": ["./App/router"],
+            "store": ["./App/store"],
             "api/*": ["./App/api/*"],
+            "hoc/*": ["./App/hoc/*"],
             "api": ["./App/api"]
         },
         "target": "es6",
@@ -43,7 +47,7 @@
         "incremental": false
     },
     "exclude": [
-        "node_modules",
+        "node_modules/**",
         "**/*.test.jsx",
         "**/*.test.js",
         "**/*.test.ts",
