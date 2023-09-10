@@ -12,12 +12,12 @@ const Search: React.FC = () => {
     const query = useApplicationSelector(getWeatherSearchQuery);
     const isLoading = useApplicationSelector(getWeatherSearchIsLoading);
     const onChange = (value: string) => dispatch(changeSearchQuery(value));
-    const onPress = () => dispatch(searchLocation());
+    const onPress = () => dispatch(searchLocation(false));
 
     return (
         <StSearch>
             <Input disabled={isLoading} onChange={onChange} placeholder="placeholder_city" value={query}/>
-            <Button disabled={isLoading} onPress={onPress} title={isLoading ? 'loading' : 'search'}/>
+            <Button disabled={isLoading} onPress={onPress} title="search"/>
         </StSearch>
     );
 };

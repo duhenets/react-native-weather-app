@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router';
 import { PAGES_CONFIG } from 'router/pages';
-import { TLocation } from 'api/requests/Weather/types';
+import { TSearchLocation } from 'api/requests/Weather/types';
 import {
     StLocation,
     StLocationGo,
@@ -12,13 +12,14 @@ import {
 } from './styled';
 
 export type TProps = {
-    location: TLocation;
+    location: TSearchLocation;
     first?: boolean;
 };
 
 const LocationItem: React.FC<TProps> = ({ first, location }) => {
     const navigate = useNavigate();
-    const handlePress = () => navigate(PAGES_CONFIG.weather.path.replace(':id', `${location.id}`));
+    const locationQuery = `${location.name},${location.lat},${location.lon}`;
+    const handlePress = () => navigate(PAGES_CONFIG.weather.path.replace(':id', locationQuery));
 
     return (
         <StLocation key={location.id} $first={first}>

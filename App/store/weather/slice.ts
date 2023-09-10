@@ -20,8 +20,8 @@ const weatherSlice = createSlice({
     },
     extraReducers: (builder) => {
         builder
-            .addCase(searchLocation.pending, (state) => {
-                state.search.isLoading = true;
+            .addCase(searchLocation.pending, (state, action) => {
+                state.search.isLoading = !action.meta.arg;
             })
             .addCase(searchLocation.rejected, (state) => {
                 state.search.isLoading = false;

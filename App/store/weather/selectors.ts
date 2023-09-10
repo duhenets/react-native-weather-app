@@ -1,6 +1,6 @@
 import { createSelector } from 'reselect';
 import { TApplicationState } from 'store';
-import { TLocation } from 'api/requests/Weather/types';
+import { TSearchLocation } from 'api/requests/Weather/types';
 import * as Types from './types';
 
 export const getWeatherState = (state: TApplicationState): Types.TWeatherState => state.weather;
@@ -17,7 +17,7 @@ export const getWeatherSearchQuery = createSelector(
 
 export const getWeatherSearchLocations = createSelector(
     getWeatherSearchState,
-    (search): Array<TLocation> => search.locations,
+    (search): Array<TSearchLocation> => search.locations,
 );
 
 export const getWeatherSearchIsLoading = createSelector(
